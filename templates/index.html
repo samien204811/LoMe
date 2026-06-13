@@ -2,84 +2,7 @@
 <html lang="en">
 <head>
     <title>Hospital Navigator | Pro</title>
-
-    <style>
-        :root {
-            --bg: #0f172a;
-            --panel: #1e293b;
-            --accent: #38bdf8;
-            --text: #f1f5f9;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            display: flex;
-            height: 100vh;
-        }
-
-        .sidebar {
-            width: 350px;
-            background: var(--panel);
-            padding: 25px;
-            box-shadow: 2px 0 10px rgba(0,0,0,0.3);
-        }
-
-        h2 { color: var(--accent); margin-top: 0; }
-
-        .input-group { margin-bottom: 15px; }
-
-        input {
-            width: 100%;
-            padding: 12px;
-            background: #0f172a;
-            border: 1px solid #334155;
-            color: white;
-            border-radius: 6px;
-        }
-
-        button {
-            width: 100%;
-            padding: 12px;
-            background: var(--accent);
-            color: var(--bg);
-            border: none;
-            border-radius: 6px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        #output {
-            margin-top: 20px;
-            border-top: 1px solid #334155;
-            padding-top: 15px;
-            max-height: 300px;
-            overflow-y: auto;
-        }
-
-        .step {
-            background: #334155;
-            padding: 8px;
-            border-radius: 4px;
-            margin-bottom: 6px;
-            font-size: 0.85em;
-        }
-
-        .map-wrapper {
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        canvas {
-            border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-            background: #0b1220;
-        }
-    </style>
+    <link rel="stylesheet" href="static/style.css">
 </head>
 
 <body>
@@ -105,60 +28,49 @@
 </div>
 
 <div class="map-wrapper">
-    <canvas id="canvas" width="900" height="650"></canvas>
+    <img id="map" />
+    <canvas id="overlay"></canvas>
 </div>
 
 <script>
-const canvas = document.getElementById("canvas");
+const map = document.getElementById("map");
+const canvas = document.getElementById("overlay");
 const ctx = canvas.getContext("2d");
 
-const scale = 6;
 let currentFloor = null;
-let floorImage = new Image();
+const scale = 6;
 
-// -----------------------------
-// LOAD FLOOR IMAGE
 // -----------------------------
 function loadFloor(floor) {
     return new Promise(resolve => {
 
-        const fileName = floor
-            .toLowerCase()
-            .replaceAll(" ", "_") + ".png";
-
+        const fileName = floor.toLowerCase().replaceAll(" ", "_") + ".png";
         const path = `/blueprints/${fileName}`;
 
-        floorImage = new Image();
-
-        floorImage.onload = () => {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.drawImage(floorImage, 0, 0, canvas.width, canvas.height);
+        map.onload = () => {
+            // match canvas to image display size
+            canvas.width = map.clientWidth;
+            canvas.height = map.clientHeight;
             resolve();
         };
 
-        floorImage.src = path;
+        map.src = path;
     });
 }
 
 // -----------------------------
-// DRAW NODE
-// -----------------------------
-function drawNode(x, y, color, label) {
-    const px = x * scale;
-    const py = y * scale;
-
-    ctx.beginPath();
-    ctx.arc(px, py, 6, 0, Math.PI * 2);
-    ctx.fillStyle = color;
-    ctx.fill();
-
-    ctx.fillStyle = "white";
-    ctx.font = "10px Segoe UI";
-    ctx.fillText(label, px + 8, py - 6);
+function clearOverlay() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
 // -----------------------------
-// DRAW LINE
+function drawNode(x, y, color, label) {
+    ctx.beginPath();
+    ctx.arc(x * scale, y * scale, 5, 0, Math.PI * 2);
+    ctx.fillStyle = color;
+    ctx.fill();
+}
+
 // -----------------------------
 function drawLine(x1, y1, x2, y2) {
     ctx.beginPath();
@@ -169,8 +81,6 @@ function drawLine(x1, y1, x2, y2) {
     ctx.stroke();
 }
 
-// -----------------------------
-// MAIN ROUTE FUNCTION
 // -----------------------------
 async function getRoute() {
 
@@ -193,36 +103,22 @@ async function getRoute() {
         return;
     }
 
-    // -----------------------------
-    // TEXT STEPS
-    // -----------------------------
-    data.steps.forEach(s => {
-        const div = document.createElement("div");
-        div.className = "step";
-        div.innerText = s;
-        out.appendChild(div);
-    });
+    const path = data.path; // backend MUST send path
 
-    // -----------------------------
-    // VISUAL PATH
-    // -----------------------------
-    const path = data.path;
-    if (!path || path.length === 0) return;
+    clearOverlay();
 
     for (let i = 0; i < path.length; i++) {
 
         const node = path[i];
 
-        // load floor if changed
         if (node.floor !== currentFloor) {
             currentFloor = node.floor;
             await loadFloor(currentFloor);
+            clearOverlay();
         }
 
-        // draw node
         drawNode(node.x, node.y, "#38bdf8", node.room);
 
-        // draw connection
         if (i < path.length - 1) {
             const next = path[i + 1];
 
@@ -232,9 +128,6 @@ async function getRoute() {
         }
     }
 
-    // -----------------------------
-    // START / END MARKERS
-    // -----------------------------
     const startNode = path[0];
     const endNode = path[path.length - 1];
 
