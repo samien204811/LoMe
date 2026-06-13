@@ -28,8 +28,7 @@
 </div>
 
 <div class="map-wrapper">
-    <img id="map" />
-    <canvas id="overlay"></canvas>
+<img id="map" style="width:100%; height:100%; object-fit:contain;" />
 </div>
 
 <script>
@@ -44,42 +43,26 @@ const scale = 6;
 function loadFloor(floor) {
     return new Promise(resolve => {
 
-        const fileName = floor.toLowerCase().replaceAll(" ", "_") + ".png";
+        const fileName = floor
+            .toLowerCase()
+            .replaceAll(" ", "_") + ".png";
+
         const path = `/blueprints/${fileName}`;
 
-        map.onload = () => {
-            // match canvas to image display size
-            canvas.width = map.clientWidth;
-            canvas.height = map.clientHeight;
-            resolve();
+        const img = new Image();
+
+        img.onload = () => {
+            const map = document.getElementById("map");
+
+            map.src = path;
+
+            map.onload = () => resolve();
         };
 
-        map.src = path;
+        img.src = path;
     });
 }
 
-// -----------------------------
-function clearOverlay() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-}
-
-// -----------------------------
-function drawNode(x, y, color, label) {
-    ctx.beginPath();
-    ctx.arc(x * scale, y * scale, 5, 0, Math.PI * 2);
-    ctx.fillStyle = color;
-    ctx.fill();
-}
-
-// -----------------------------
-function drawLine(x1, y1, x2, y2) {
-    ctx.beginPath();
-    ctx.moveTo(x1 * scale, y1 * scale);
-    ctx.lineTo(x2 * scale, y2 * scale);
-    ctx.strokeStyle = "#38bdf8";
-    ctx.lineWidth = 2;
-    ctx.stroke();
-}
 
 // -----------------------------
 async function getRoute() {
@@ -94,6 +77,7 @@ async function getRoute() {
     });
 
     const data = await res.json();
+    console.log(data);
 
     const out = document.getElementById("output");
     out.innerHTML = "";
@@ -103,36 +87,41 @@ async function getRoute() {
         return;
     }
 
-    const path = data.path; // backend MUST send path
+    // -----------------------------
+    // TEXT STEPS ONLY
+    // -----------------------------
+    const steps = data.steps || [];
 
-    clearOverlay();
+    if (steps.length === 0) {
+        out.innerHTML = `<div class="step">No navigation steps available.</div>`;
+    } else {
+        steps.forEach(step => {
+            const div = document.createElement("div");
+            div.className = "step";
+            div.innerText = step;
+            out.appendChild(div);
+        });
+    }
 
-    for (let i = 0; i < path.length; i++) {
+    // -----------------------------
+    // FLOOR DISPLAY ONLY (NO OVERLAY)
+    // -----------------------------
+    const path = data.path;
+    if (!path || path.length === 0) return;
 
+    // show ONLY first floor initially
+    let currentFloor = path[0].floor;
+    await loadFloor(currentFloor);
+
+    // optional: auto-switch floor when path changes floor
+    for (let i = 1; i < path.length; i++) {
         const node = path[i];
 
         if (node.floor !== currentFloor) {
             currentFloor = node.floor;
             await loadFloor(currentFloor);
-            clearOverlay();
-        }
-
-        drawNode(node.x, node.y, "#38bdf8", node.room);
-
-        if (i < path.length - 1) {
-            const next = path[i + 1];
-
-            if (next.floor === node.floor) {
-                drawLine(node.x, node.y, next.x, next.y);
-            }
         }
     }
-
-    const startNode = path[0];
-    const endNode = path[path.length - 1];
-
-    drawNode(startNode.x, startNode.y, "lime", "START");
-    drawNode(endNode.x, endNode.y, "red", "END");
 }
 </script>
 
