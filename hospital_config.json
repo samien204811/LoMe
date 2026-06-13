@@ -1,0 +1,558 @@
+{
+  "hospital_name": "St. Jude 20-Floor Metropolitan Medical Center",
+  "floors": {
+    "Ground Floor": {
+      "critical_links": [
+        ["ER NURSE HUB", "TRAUMA BAY A"],
+        ["ER NURSE HUB", "TRAUMA BAY B"],
+        ["ER NURSE HUB", "EMERGENCY TRIAGE"]
+      ],
+      "slots": [
+        [15, 0, 12, 15, "MAIN RECEPTION", "Public", true, "001"],
+        [15, 15, 12, 41, "CENTRAL WAITING ATRIUM", "Circulation", true, "002"],
+        [0, 23, 15, 10, "STAIRS (UP / DN)", "Circulation", true, "003"],
+        [0, 41, 15, 8, "LIFT", "Circulation", true, "004"],
+        [37, 44, 5, 12, "EMERGENCY EXIT", "Circulation", true, "005"],
+        [27, 0, 15, 20, "EMERGENCY TRIAGE", "Critical", false, "006"],
+        [27, 20, 10, 12, "TRAUMA BAY A", "Critical", false, "007"],
+        [37, 20, 5, 12, "TOILET", "Utility", false, "008"],
+        [27, 32, 10, 12, "TRAUMA BAY B", "Critical", false, "009"],
+        [37, 32, 5, 12, "TOILET", "Utility", false, "010"],
+        [27, 44, 10, 12, "DECONTAM STATION", "Critical", false, "011"],
+        [22, 56, 20, 16, "AMBULANCE BAY", "Circulation", false, "012"],
+        [17, 56, 5, 16, "CLEANING LOCK", "Utility", false, "013"],
+        [0, 0, 15, 5, "SECURITY OFFICE", "Staff", false, "014"],
+        [0, 5, 15, 10, "ADMISSIONS BLOC", "Public", false, "015"],
+        [0, 15, 15, 8, "ER NURSE HUB", "Staff", false, "016"],
+        [0, 49, 15, 10, "OUTPATIENT PHARMACY", "Public", false, "017"],
+        [0, 59, 17, 13, "GIFT SHOP & CAFE", "Public", false, "018"]
+      ]
+    },
+    "First Floor": {
+      "critical_links": [
+        ["NURSING STATION", "SICU ROOM"],
+        ["O.T", "AUTOCLAVE / SCRUB"],
+        ["O.T", "SICU ROOM"]
+      ],
+      "slots": [
+        [15, 0, 12, 15, "SURGICAL LOBBY", "Circulation", true, "101"],
+        [15, 15, 12, 41, "WAITING HALL & LOBBY FOR CIRCULATION", "Circulation", true, "102"],
+        [0, 23, 15, 10, "STAIRS (UP / DN)", "Circulation", true, "103"],
+        [0, 41, 15, 8, "LIFT", "Circulation", true, "104"],
+        [37, 44, 5, 12, "EMERGENCY EXIT", "Circulation", true, "105"],
+        [27, 0, 15, 20, "SICU ROOM", "Critical", false, "106"],
+        [27, 20, 10, 12, "RECOVERY BAY A", "Critical", false, "107"],
+        [37, 20, 5, 12, "TOILET", "Utility", false, "108"],
+        [27, 32, 10, 12, "RECOVERY BAY B", "Critical", false, "109"],
+        [37, 32, 5, 12, "TOILET", "Utility", false, "110"],
+        [27, 44, 10, 12, "ANESTHESIA DEPOT", "Critical", false, "111"],
+        [22, 56, 20, 16, "SURGICAL ICU EXTRA", "Critical", false, "112"],
+        [17, 56, 5, 16, "SOILED UTILITY", "Utility", false, "113"],
+        [0, 0, 15, 5, "AUTOCLAVE / SCRUB", "Utility", false, "114"],
+        [0, 5, 15, 10, "O.T", "Critical", false, "115"],
+        [0, 15, 15, 8, "NURSING STATION", "Staff", false, "116"],
+        [0, 49, 15, 10, "DOCTOR ROOM", "Staff", false, "117"],
+        [0, 59, 17, 13, "SURGEON LOUNGE", "Staff", false, "118"]
+      ]
+    },
+    "Second Floor": {
+      "critical_links": [
+        ["CLINIC CHECK-IN", "CARDIOLOGY SUITE"],
+        ["CLINIC CHECK-IN", "ORTHOPEDIC HUB"]
+      ],
+      "slots": [
+        [15, 0, 12, 15, "LOBBY (CLINIC)", "Circulation", true, "201"],
+        [15, 15, 12, 41, "WAITING HALL & LOBBY FOR CIRCULATION", "Circulation", true, "202"],
+        [0, 23, 15, 10, "STAIRS (UP / DN)", "Circulation", true, "203"],
+        [0, 41, 15, 8, "LIFT", "Circulation", true, "204"],
+        [37, 44, 5, 12, "EMERGENCY EXIT", "Circulation", true, "205"],
+        [27, 0, 15, 20, "CARDIOLOGY SUITE", "Clinical", false, "206"],
+        [27, 20, 10, 12, "ORTHOPEDIC HUB", "Clinical", false, "207"],
+        [37, 20, 5, 12, "TOILET", "Utility", false, "208"],
+        [27, 32, 10, 12, "NEUROLOGY DEPT", "Clinical", false, "209"],
+        [37, 32, 5, 12, "TOILET", "Utility", false, "210"],
+        [27, 44, 10, 12, "ENT CLINIC", "Clinical", false, "211"],
+        [22, 56, 20, 16, "PODIATRY UNIT", "Clinical", false, "212"],
+        [17, 56, 5, 16, "PATIENT TOILET", "Utility", false, "213"],
+        [0, 0, 15, 5, "STAFF BREAKROOM", "Staff", false, "214"],
+        [0, 5, 15, 10, "DERMATOLOGY WING", "Clinical", false, "215"],
+        [0, 15, 15, 8, "CLINIC CHECK-IN", "Public", false, "216"],
+        [0, 49, 15, 10, "CONSULT ROOM 1", "Staff", false, "217"],
+        [0, 59, 17, 13, "CONSULT ROOM 2", "Staff", false, "218"]
+      ]
+    },
+    "Third Floor": {
+      "critical_links": [
+        ["DIAGNOSTIC DESK", "MRI SUITE 1"],
+        ["DIAGNOSTIC DESK", "CT SCAN ROOM"]
+      ],
+      "slots": [
+        [15, 0, 12, 15, "LOBBY (IMAGING)", "Circulation", true, "301"],
+        [15, 15, 12, 41, "WAITING HALL & LOBBY FOR CIRCULATION", "Circulation", true, "302"],
+        [0, 23, 15, 10, "STAIRS (UP / DN)", "Circulation", true, "303"],
+        [0, 41, 15, 8, "LIFT", "Circulation", true, "304"],
+        [37, 44, 5, 12, "EMERGENCY EXIT", "Circulation", true, "305"],
+        [27, 0, 15, 20, "MRI SUITE 1", "Diagnostic", false, "306"],
+        [27, 20, 10, 12, "CT SCAN ROOM", "Diagnostic", false, "307"],
+        [37, 20, 5, 12, "LEAD TOILET", "Utility", false, "308"],
+        [27, 32, 10, 12, "ULTRASOUND LAB", "Diagnostic", false, "309"],
+        [37, 32, 5, 12, "TOILET", "Utility", false, "310"],
+        [27, 44, 10, 12, "ECHO LAB", "Diagnostic", false, "311"],
+        [22, 56, 20, 16, "MAMMOGRAPHY", "Diagnostic", false, "312"],
+        [17, 56, 5, 16, "LOCKERS", "Utility", false, "313"],
+        [0, 0, 15, 5, "FILM ARCHIVE", "Utility", false, "314"],
+        [0, 5, 15, 10, "MRI CONTROLS", "Staff", false, "315"],
+        [0, 15, 15, 8, "DIAGNOSTIC DESK", "Public", false, "316"],
+        [0, 49, 15, 10, "RADIOLOGIST LAB", "Staff", false, "317"],
+        [0, 59, 17, 13, "TECH DESK", "Staff", false, "318"]
+      ]
+    },
+    "Fourth Floor": {
+      "critical_links": [
+        ["PEDIATRIC HUB", "NICU AREA"],
+        ["PEDIATRIC HUB", "PEDIATRIC WARD"]
+      ],
+      "slots": [
+        [15, 0, 12, 15, "LOBBY (MATERNITY)", "Circulation", true, "401"],
+        [15, 15, 12, 41, "WAITING HALL & LOBBY FOR CIRCULATION", "Circulation", true, "402"],
+        [0, 23, 15, 10, "STAIRS (UP / DN)", "Circulation", true, "403"],
+        [0, 41, 15, 8, "LIFT", "Circulation", true, "404"],
+        [37, 44, 5, 12, "EMERGENCY EXIT", "Circulation", true, "405"],
+        [27, 0, 15, 20, "NICU AREA", "Critical", false, "406"],
+        [27, 20, 10, 12, "PEDIATRIC WARD", "Clinical", false, "407"],
+        [37, 20, 5, 12, "TOILET", "Utility", false, "408"],
+        [27, 32, 10, 12, "LABOR SUITE A", "Critical", false, "409"],
+        [37, 32, 5, 12, "TOILET", "Utility", false, "410"],
+        [27, 44, 10, 12, "LABOR SUITE B", "Critical", false, "411"],
+        [22, 56, 20, 16, "MATERNITY WARD", "Clinical", false, "412"],
+        [17, 56, 5, 16, "LACTATION", "Utility", false, "413"],
+        [0, 0, 15, 5, "LINEN OUTLET", "Utility", false, "414"],
+        [0, 5, 15, 10, "OBGYN CLINIC", "Clinical", false, "415"],
+        [0, 15, 15, 8, "PEDIATRIC HUB", "Staff", false, "416"],
+        [0, 49, 15, 10, "PLAYROOM ZONE", "Public", false, "417"],
+        [0, 59, 17, 13, "NURSERY ROOM", "Clinical", false, "418"]
+      ]
+    },
+    "Fifth Floor": {
+      "critical_links": [
+        ["ONCOLOGY STATION", "CHEMO INFUSION BAY"],
+        ["ONCOLOGY STATION", "BIO PHARMACY"]
+      ],
+      "slots": [
+        [15, 0, 12, 15, "LOBBY (ONCOLOGY)", "Circulation", true, "501"],
+        [15, 15, 12, 41, "WAITING HALL & LOBBY FOR CIRCULATION", "Circulation", true, "502"],
+        [0, 23, 15, 10, "STAIRS (UP / DN)", "Circulation", true, "503"],
+        [0, 41, 15, 8, "LIFT", "Circulation", true, "504"],
+        [37, 44, 5, 12, "EMERGENCY EXIT", "Circulation", true, "505"],
+        [27, 0, 15, 20, "CHEMO INFUSION BAY", "Clinical", false, "506"],
+        [27, 20, 10, 12, "ONCOLOGY BED-1", "Clinical", false, "507"],
+        [37, 20, 5, 12, "TOILET", "Utility", false, "508"],
+        [27, 32, 10, 12, "ONCOLOGY BED-2", "Clinical", false, "509"],
+        [37, 32, 5, 12, "TOILET", "Utility", false, "510"],
+        [27, 44, 10, 12, "ONCOLOGY BED-3", "Clinical", false, "511"],
+        [22, 56, 20, 16, "RADIATION ROOM", "Critical", false, "512"],
+        [17, 56, 5, 16, "WASTE TRACK", "Utility", false, "513"],
+        [0, 0, 15, 5, "BIO PHARMACY", "Utility", false, "514"],
+        [0, 5, 15, 10, "COUNSEL ZONE", "Public", false, "515"],
+        [0, 15, 15, 8, "ONCOLOGY STATION", "Staff", false, "516"],
+        [0, 49, 15, 10, "DOCTOR DESK", "Staff", false, "517"],
+        [0, 59, 17, 13, "LINEN STORAGE", "Utility", false, "518"]
+      ]
+    },
+    "Sixth Floor": {
+      "comment": "General Wards Block A",
+      "critical_links": [
+        ["NURSE STATION 6", "GENERAL WARD 6A"],
+        ["NURSE STATION 6", "GENERAL WARD 6B"],
+        ["NURSE STATION 6", "MEDICATION BAY"]
+      ],
+      "slots": [
+        [15, 0, 12, 15, "WARD LOBBY 6", "Circulation", true, "601"],
+        [15, 15, 12, 41, "WAITING HALL & LOBBY FOR CIRCULATION", "Circulation", true, "602"],
+        [0, 23, 15, 10, "STAIRS (UP / DN)", "Circulation", true, "603"],
+        [0, 41, 15, 8, "LIFT", "Circulation", true, "604"],
+        [37, 44, 5, 12, "EMERGENCY EXIT", "Circulation", true, "605"],
+        [27, 0, 15, 20, "GENERAL WARD 6A", "Clinical", false, "606"],
+        [27, 20, 10, 12, "GENERAL WARD 6B", "Clinical", false, "607"],
+        [37, 20, 5, 12, "WARD TOILET 1", "Utility", false, "608"],
+        [27, 32, 10, 12, "GENERAL WARD 6C", "Clinical", false, "609"],
+        [37, 32, 5, 12, "WARD TOILET 2", "Utility", false, "610"],
+        [27, 44, 10, 12, "GENERAL WARD 6D", "Clinical", false, "611"],
+        [22, 56, 20, 16, "COMMUNAL CARE WARD 6E", "Clinical", false, "612"],
+        [17, 56, 5, 16, "CLEAN SUPPLIES", "Utility", false, "613"],
+        [0, 0, 15, 5, "MEDICATION BAY", "Utility", false, "614"],
+        [0, 5, 15, 10, "VISITOR AREA", "Public", false, "615"],
+        [0, 15, 15, 8, "NURSE STATION 6", "Staff", false, "616"],
+        [0, 49, 15, 10, "STAFF ROOM", "Staff", false, "617"],
+        [0, 59, 17, 13, "EQUIPMENT STORE", "Utility", false, "618"]
+      ]
+    },
+    "Seventh Floor": {
+      "comment": "General Wards Block B",
+      "critical_links": [
+        ["NURSE STATION 7", "GENERAL WARD 7A"],
+        ["NURSE STATION 7", "GENERAL WARD 7B"]
+      ],
+      "slots": [
+        [15, 0, 12, 15, "WARD LOBBY 7", "Circulation", true, "701"],
+        [15, 15, 12, 41, "WAITING HALL & LOBBY FOR CIRCULATION", "Circulation", true, "702"],
+        [0, 23, 15, 10, "STAIRS (UP / DN)", "Circulation", true, "703"],
+        [0, 41, 15, 8, "LIFT", "Circulation", true, "704"],
+        [37, 44, 5, 12, "EMERGENCY EXIT", "Circulation", true, "705"],
+        [27, 0, 15, 20, "GENERAL WARD 7A", "Clinical", false, "706"],
+        [27, 20, 10, 12, "GENERAL WARD 7B", "Clinical", false, "707"],
+        [37, 20, 5, 12, "TOILET A", "Utility", false, "708"],
+        [27, 32, 10, 12, "GENERAL WARD 7C", "Clinical", false, "709"],
+        [37, 32, 5, 12, "TOILET B", "Utility", false, "710"],
+        [27, 44, 10, 12, "GENERAL WARD 7D", "Clinical", false, "711"],
+        [22, 56, 20, 16, "SHARED OCCUPANCY 7E", "Clinical", false, "712"],
+        [17, 56, 5, 16, "LINEN LOCK", "Utility", false, "713"],
+        [0, 0, 15, 5, "DRUG STORAGE", "Utility", false, "714"],
+        [0, 5, 15, 10, "FAMILY LOUNGE", "Public", false, "715"],
+        [0, 15, 15, 8, "NURSE STATION 7", "Staff", false, "716"],
+        [0, 49, 15, 10, "ON-CALL ROOM", "Staff", false, "717"],
+        [0, 59, 17, 13, "UTILITY CORE", "Utility", false, "718"]
+      ]
+    },
+    "Eighth Floor": {
+      "comment": "Private Wards Block A",
+      "critical_links": [
+        ["PRIVATE NURSE HUB 8", "PRIVATE SUITE 801"],
+        ["PRIVATE NURSE HUB 8", "PRIVATE SUITE 802"]
+      ],
+      "slots": [
+        [15, 0, 12, 15, "SUITE LOBBY 8", "Circulation", true, "800"],
+        [15, 15, 12, 41, "WAITING HALL & LOBBY FOR CIRCULATION", "Circulation", true, "802"],
+        [0, 23, 15, 10, "STAIRS (UP / DN)", "Circulation", true, "803"],
+        [0, 41, 15, 8, "LIFT", "Circulation", true, "804"],
+        [37, 44, 5, 12, "EMERGENCY EXIT", "Circulation", true, "805"],
+        [27, 0, 15, 20, "PRIVATE SUITE 801", "Clinical", false, "801"],
+        [27, 20, 10, 12, "PRIVATE SUITE 802", "Clinical", false, "802-S"],
+        [37, 20, 5, 12, "ENSUITE 1", "Utility", false, "806"],
+        [27, 32, 10, 12, "PRIVATE SUITE 803", "Clinical", false, "803"],
+        [37, 32, 5, 12, "ENSUITE 2", "Utility", false, "807"],
+        [27, 44, 10, 12, "PRIVATE SUITE 804", "Clinical", false, "804"],
+        [22, 56, 20, 16, "DELUXE ROOM 805", "Clinical", false, "805"],
+        [17, 56, 5, 16, "PANTRIES", "Utility", false, "808"],
+        [0, 0, 15, 5, "DISPENSARY 8", "Utility", false, "809"],
+        [0, 5, 15, 10, "VIP LOUNGE", "Public", false, "810"],
+        [0, 15, 15, 8, "PRIVATE NURSE HUB 8", "Staff", false, "811"],
+        [0, 49, 15, 10, "DOCTOR SUITE 8", "Staff", false, "812"],
+        [0, 59, 17, 13, "CLEAN ROOM", "Utility", false, "813"]
+      ]
+    },
+    "Ninth Floor": {
+      "comment": "Private Wards Block B",
+      "critical_links": [
+        ["PRIVATE NURSE HUB 9", "PRIVATE SUITE 901"],
+        ["PRIVATE NURSE HUB 9", "PRIVATE SUITE 902"]
+      ],
+      "slots": [
+        [15, 0, 12, 15, "SUITE LOBBY 9", "Circulation", true, "900"],
+        [15, 15, 12, 41, "WAITING HALL & LOBBY FOR CIRCULATION", "Circulation", true, "902-L"],
+        [0, 23, 15, 10, "STAIRS (UP / DN)", "Circulation", true, "903"],
+        [0, 41, 15, 8, "LIFT", "Circulation", true, "904"],
+        [37, 44, 5, 12, "EMERGENCY EXIT", "Circulation", true, "905"],
+        [27, 0, 15, 20, "PRIVATE SUITE 901", "Clinical", false, "901"],
+        [27, 20, 10, 12, "PRIVATE SUITE 902", "Clinical", false, "902"],
+        [37, 20, 5, 12, "ENSUITE A", "Utility", false, "906"],
+        [27, 32, 10, 12, "PRIVATE SUITE 903", "Clinical", false, "903-S"],
+        [37, 32, 5, 12, "ENSUITE B", "Utility", false, "907"],
+        [27, 44, 10, 12, "PRIVATE SUITE 904", "Clinical", false, "904"],
+        [22, 56, 20, 16, "DELUXE ROOM 905", "Clinical", false, "905-S"],
+        [17, 56, 5, 16, "SERVICE DESK", "Utility", false, "908"],
+        [0, 0, 15, 5, "MED DEPOT 9", "Utility", false, "909"],
+        [0, 5, 15, 10, "QUIET ATRIUM", "Public", false, "910"],
+        [0, 15, 15, 8, "PRIVATE NURSE HUB 9", "Staff", false, "911"],
+        [0, 49, 15, 10, "PHYSICIAN ROOM", "Staff", false, "912"],
+        [0, 59, 17, 13, "STERILE BASE", "Utility", false, "913"]
+      ]
+    },
+    "Tenth Floor": {
+      "comment": "Cardiology & Coronary Care Unit (CCU)",
+      "critical_links": [
+        ["CARDIAC NURSE HUB", "CCU ACUTE ROOM"],
+        ["CARDIAC NURSE HUB", "CATHETER LAB"]
+      ],
+      "slots": [
+        [15, 0, 12, 15, "CARDIAC LOBBY", "Circulation", true, "1001"],
+        [15, 15, 12, 41, "WAITING HALL & LOBBY FOR CIRCULATION", "Circulation", true, "1002"],
+        [0, 23, 15, 10, "STAIRS (UP / DN)", "Circulation", true, "1003"],
+        [0, 41, 15, 8, "LIFT", "Circulation", true, "1004"],
+        [37, 44, 5, 12, "EMERGENCY EXIT", "Circulation", true, "1005"],
+        [27, 0, 15, 20, "CCU ACUTE ROOM", "Critical", false, "1006"],
+        [27, 20, 10, 12, "CARDIAC WARD 1", "Clinical", false, "1007"],
+        [37, 20, 5, 12, "TOILET", "Utility", false, "1008"],
+        [27, 32, 10, 12, "CARDIAC WARD 2", "Clinical", false, "1009"],
+        [37, 32, 5, 12, "TOILET", "Utility", false, "1010"],
+        [27, 44, 10, 12, "ECHOCARDIOGRAPHY", "Diagnostic", false, "1011"],
+        [22, 56, 20, 16, "CATHETER LAB", "Critical", false, "1012"],
+        [17, 56, 5, 16, "PREP BAY", "Utility", false, "1013"],
+        [0, 0, 15, 5, "ECG RIGS", "Diagnostic", false, "1014"],
+        [0, 5, 15, 10, "PACEMAKER CLINIC", "Clinical", false, "1015"],
+        [0, 15, 15, 8, "CARDIAC NURSE HUB", "Staff", false, "1016"],
+        [0, 49, 15, 10, "CARDIOLOGIST ROOM", "Staff", false, "1017"],
+        [0, 59, 17, 13, "TELEMETRY HUB", "Staff", false, "1018"]
+      ]
+    },
+    "Eleventh Floor": {
+      "comment": "Neurology & Stroke Rehab Center",
+      "critical_links": [
+        ["STROKE HUB", "STROKE ACUTE UNIT"],
+        ["STROKE HUB", "NEURO REHAB SUITE"]
+      ],
+      "slots": [
+        [15, 0, 12, 15, "NEURO LOBBY", "Circulation", true, "1101"],
+        [15, 15, 12, 41, "WAITING HALL & LOBBY FOR CIRCULATION", "Circulation", true, "1102"],
+        [0, 23, 15, 10, "STAIRS (UP / DN)", "Circulation", true, "1103"],
+        [0, 41, 15, 8, "LIFT", "Circulation", true, "1104"],
+        [37, 44, 5, 12, "EMERGENCY EXIT", "Circulation", true, "1105"],
+        [27, 0, 15, 20, "STROKE ACUTE UNIT", "Critical", false, "1106"],
+        [27, 20, 10, 12, "NEURO WARD A", "Clinical", false, "1107"],
+        [37, 20, 5, 12, "TOILET", "Utility", false, "1108"],
+        [27, 32, 10, 12, "NEURO WARD B", "Clinical", false, "1109"],
+        [37, 32, 5, 12, "TOILET", "Utility", false, "1110"],
+        [27, 44, 10, 12, "EEG BRAIN MAPPING", "Diagnostic", false, "1111"],
+        [22, 56, 20, 16, "NEURO REHAB SUITE", "Clinical", false, "1112"],
+        [17, 56, 5, 16, "HOIST ROOM", "Utility", false, "1113"],
+        [0, 0, 15, 5, "REFLEX LAB", "Diagnostic", false, "1114"],
+        [0, 5, 15, 10, "SPEECH ANNEX", "Clinical", false, "1115"],
+        [0, 15, 15, 8, "STROKE HUB", "Staff", false, "1116"],
+        [0, 49, 15, 10, "NEUROLOGIST DESK", "Staff", false, "1117"],
+        [0, 59, 17, 13, "SENSORY ROOM", "Clinical", false, "1118"]
+      ]
+    },
+    "Twelfth Floor": {
+      "comment": "Gastroenterology & Urology Clinics",
+      "critical_links": [
+        ["GI HUB", "ENDOSCOPY SUITE"],
+        ["GI HUB", "UROLOGY WARD"]
+      ],
+      "slots": [
+        [15, 0, 12, 15, "GI LOBBY", "Circulation", true, "1201"],
+        [15, 15, 12, 41, "WAITING HALL & LOBBY FOR CIRCULATION", "Circulation", true, "1202"],
+        [0, 23, 15, 10, "STAIRS (UP / DN)", "Circulation", true, "1203"],
+        [0, 41, 15, 8, "LIFT", "Circulation", true, "1204"],
+        [37, 44, 5, 12, "EMERGENCY EXIT", "Circulation", true, "1205"],
+        [27, 0, 15, 20, "ENDOSCOPY SUITE", "Critical", false, "1206"],
+        [27, 20, 10, 12, "UROLOGY WARD", "Clinical", false, "1207"],
+        [37, 20, 5, 12, "TOILET", "Utility", false, "1208"],
+        [27, 32, 10, 12, "RENAL CLUSTER", "Clinical", false, "1209"],
+        [37, 32, 5, 12, "TOILET", "Utility", false, "1210"],
+        [27, 44, 10, 12, "COLONOSCOPY ROOM", "Critical", false, "1211"],
+        [22, 56, 20, 16, "GI INPATIENT WARD", "Clinical", false, "1212"],
+        [17, 56, 5, 16, "SCOPE WASH", "Utility", false, "1213"],
+        [0, 0, 15, 5, "SPECIMEN STORE", "Utility", false, "1214"],
+        [0, 5, 15, 10, "INFUSION APEX", "Clinical", false, "1215"],
+        [0, 15, 15, 8, "GI HUB", "Staff", false, "1216"],
+        [0, 49, 15, 10, "SURGEON HUB", "Staff", false, "1217"],
+        [0, 59, 17, 13, "RECOVERY LOUNGE", "Public", false, "1218"]
+      ]
+    },
+    "Thirteenth Floor": {
+      "comment": "Pulmonary & Respiratory Care",
+      "critical_links": [
+        ["RESPIRATORY STATION", "VENTILATOR POD"],
+        ["RESPIRATORY STATION", "PULMONARY LAB"]
+      ],
+      "slots": [
+        [15, 0, 12, 15, "RESPIRATORY LOBBY", "Circulation", true, "1301"],
+        [15, 15, 12, 41, "WAITING HALL & LOBBY FOR CIRCULATION", "Circulation", true, "1302"],
+        [0, 23, 15, 10, "STAIRS (UP / DN)", "Circulation", true, "1303"],
+        [0, 41, 15, 8, "LIFT", "Circulation", true, "1304"],
+        [37, 44, 5, 12, "EMERGENCY EXIT", "Circulation", true, "1305"],
+        [27, 0, 15, 20, "VENTILATOR POD", "Critical", false, "1306"],
+        [27, 20, 10, 12, "RESPIRATORY WARD A", "Clinical", false, "1307"],
+        [37, 20, 5, 12, "TOILET", "Utility", false, "1308"],
+        [27, 32, 10, 12, "RESPIRATORY WARD B", "Clinical", false, "1309"],
+        [37, 32, 5, 12, "TOILET", "Utility", false, "1310"],
+        [27, 44, 10, 12, "OXYGEN REFILL STATION", "Utility", false, "1311"],
+        [22, 56, 20, 16, "PULMONARY LAB", "Diagnostic", false, "1312"],
+        [17, 56, 5, 16, "MASK DISPENSARY", "Utility", false, "1313"],
+        [0, 0, 15, 5, "GAS CONTROL", "Utility", false, "1314"],
+        [0, 5, 15, 10, "SLEEP CLINIC ROOM", "Clinical", false, "1315"],
+        [0, 15, 15, 8, "RESPIRATORY STATION", "Staff", false, "1316"],
+        [0, 49, 15, 10, "PULMONOLOGIST DESK", "Staff", false, "1317"],
+        [0, 59, 17, 13, "ISOLATION AIRLOCK", "Critical", false, "1318"]
+      ]
+    },
+    "Fourteenth Floor": {
+      "comment": "Endocrinology & Rheumatology Inpatients",
+      "critical_links": [
+        ["ENDO NURSE HUB", "ENDO ACUTE RECOVERY"],
+        ["ENDO NURSE HUB", "DIABETIC CLINIC"]
+      ],
+      "slots": [
+        [15, 0, 12, 15, "ENDO LOBBY", "Circulation", true, "1401"],
+        [15, 15, 12, 41, "WAITING HALL & LOBBY FOR CIRCULATION", "Circulation", true, "1402"],
+        [0, 23, 15, 10, "STAIRS (UP / DN)", "Circulation", true, "1403"],
+        [0, 41, 15, 8, "LIFT", "Circulation", true, "1404"],
+        [37, 44, 5, 12, "EMERGENCY EXIT", "Circulation", true, "1405"],
+        [27, 0, 15, 20, "ENDO ACUTE RECOVERY", "Clinical", false, "1406"],
+        [27, 20, 10, 12, "RHEUMATOLOGY WARD", "Clinical", false, "1407"],
+        [37, 20, 5, 12, "TOILET", "Utility", false, "1408"],
+        [27, 32, 10, 12, "METABOLIC WARD", "Clinical", false, "1409"],
+        [37, 32, 5, 12, "TOILET", "Utility", false, "1410"],
+        [27, 44, 10, 12, "HORMONE LAB", "Diagnostic", false, "1411"],
+        [22, 56, 20, 16, "DIABETIC CLINIC", "Clinical", false, "1412"],
+        [17, 56, 5, 16, "PUMP SUPPLIES", "Utility", false, "1413"],
+        [0, 0, 15, 5, "NUTRITION OFFICE", "Staff", false, "1414"],
+        [0, 5, 15, 10, "PODIATRY MATRIX", "Clinical", false, "1415"],
+        [0, 15, 15, 8, "ENDO NURSE HUB", "Staff", false, "1416"],
+        [0, 49, 15, 10, "SPECIALIST HUB", "Staff", false, "1417"],
+        [0, 59, 17, 13, "PATIENT REC ROOM", "Public", false, "1418"]
+      ]
+    },
+    "Fifteenth Floor": {
+      "comment": "Geriatric Care & Memory Support Units",
+      "critical_links": [
+        ["GERIATRIC HUB", "MEMORY WARD BOX"],
+        ["GERIATRIC HUB", "MOBILITY EXERCISE GYM"]
+      ],
+      "slots": [
+        [15, 0, 12, 15, "GERIATRIC LOBBY", "Circulation", true, "1501"],
+        [15, 15, 12, 41, "WAITING HALL & LOBBY FOR CIRCULATION", "Circulation", true, "1502"],
+        [0, 23, 15, 10, "STAIRS (UP / DN)", "Circulation", true, "1503"],
+        [0, 41, 15, 8, "LIFT", "Circulation", true, "1504"],
+        [37, 44, 5, 12, "EMERGENCY EXIT", "Circulation", true, "1505"],
+        [27, 0, 15, 20, "MEMORY WARD BOX", "Clinical", false, "1506"],
+        [27, 20, 10, 12, "SENIOR WARD A", "Clinical", false, "1507"],
+        [37, 20, 5, 12, "GRAB RAIL TOILET", "Utility", false, "1508"],
+        [27, 32, 10, 12, "SENIOR WARD B", "Clinical", false, "1509"],
+        [37, 32, 5, 12, "GRAB RAIL TOILET", "Utility", false, "1510"],
+        [27, 44, 10, 12, "LOW IMPACT SPA", "Clinical", false, "1511"],
+        [22, 56, 20, 16, "MOBILITY EXERCISE GYM", "Clinical", false, "1512"],
+        [17, 56, 5, 16, "WHEELCHAIR DEPOT", "Utility", false, "1513"],
+        [0, 0, 15, 5, "ALARM CHECK STATION", "Staff", false, "1514"],
+        [0, 5, 15, 10, "THERAPY ZONE", "Public", false, "1515"],
+        [0, 15, 15, 8, "GERIATRIC HUB", "Staff", false, "1516"],
+        [0, 49, 15, 10, "SOCIAL WORKERS", "Staff", false, "1517"],
+        [0, 59, 17, 13, "ANTI SLIP HALLWAY", "Public", false, "1518"]
+      ]
+    },
+    "Sixteenth Floor": {
+      "comment": "Mental Health & Inpatient Psychiatric Wing",
+      "critical_links": [
+        ["PSYCH CONTROL DESK", "SECURE STABILIZATION"],
+        ["PSYCH CONTROL DESK", "PSYCH THERAPY HUB"]
+      ],
+      "slots": [
+        [15, 0, 12, 15, "SECURED ENTRY CORRIDOR", "Circulation", true, "1601"],
+        [15, 15, 12, 41, "WAITING HALL & LOBBY FOR CIRCULATION", "Circulation", true, "1602"],
+        [0, 23, 15, 10, "STAIRS (UP / DN)", "Circulation", true, "1603"],
+        [0, 41, 15, 8, "LIFT", "Circulation", true, "1604"],
+        [37, 44, 5, 12, "EMERGENCY EXIT", "Circulation", true, "1605"],
+        [27, 0, 15, 20, "SECURE STABILIZATION", "Critical", false, "1606"],
+        [27, 20, 10, 12, "PATIENT QUARTERS A", "Clinical", false, "1607"],
+        [37, 20, 5, 12, "SAFETY TOILET", "Utility", false, "1608"],
+        [27, 32, 10, 12, "PATIENT QUARTERS B", "Clinical", false, "1609"],
+        [37, 32, 5, 12, "SAFETY TOILET", "Utility", false, "1610"],
+        [27, 44, 10, 12, "PATIENT QUARTERS C", "Clinical", false, "1611"],
+        [22, 56, 20, 16, "PSYCH THERAPY HUB", "Clinical", false, "1612"],
+        [17, 56, 5, 16, "SOFT STORAGE", "Utility", false, "1613"],
+        [0, 0, 15, 5, "RECORDS CABINET", "Utility", false, "1614"],
+        [0, 5, 15, 10, "CALM DOWN BLOCK", "Critical", false, "1615"],
+        [0, 15, 15, 8, "PSYCH CONTROL DESK", "Staff", false, "1616"],
+        [0, 49, 15, 10, "CASE WORKERS LAB", "Staff", false, "1617"],
+        [0, 59, 17, 13, "GROUP ACTIVE LOUNGE", "Public", false, "1618"]
+      ]
+    },
+    "Seventeenth Floor": {
+      "comment": "Rehabilitation, Physical Therapy & Hydrotherapy",
+      "critical_links": [
+        ["REHAB ADMIN CORE", "PHYSIO POOL SPACE"],
+        ["REHAB ADMIN CORE", "OCCUPATIONAL LAB"]
+      ],
+      "slots": [
+        [15, 0, 12, 15, "LOBBY (REHAB)", "Circulation", true, "1701"],
+        [15, 15, 12, 41, "WAITING HALL & LOBBY FOR CIRCULATION", "Circulation", true, "1702"],
+        [0, 23, 15, 10, "STAIRS (UP / DN)", "Circulation", true, "1703"],
+        [0, 41, 15, 8, "LIFT", "Circulation", true, "1704"],
+        [37, 44, 5, 12, "EMERGENCY EXIT", "Circulation", true, "1705"],
+        [27, 0, 15, 20, "PHYSIO POOL SPACE", "Clinical", false, "1706"],
+        [27, 20, 10, 12, "OCCUPATIONAL LAB", "Clinical", false, "1707"],
+        [37, 20, 5, 12, "DRY ROOM", "Utility", false, "1708"],
+        [27, 32, 10, 12, "SPEECH THEATER", "Clinical", false, "1709"],
+        [37, 32, 5, 12, "TOILET", "Utility", false, "1710"],
+        [27, 44, 10, 12, "PROSTHETICS LAB", "Clinical", false, "1711"],
+        [22, 56, 20, 16, "SENSORY MOTOR TRACK", "Clinical", false, "1712"],
+        [17, 56, 5, 16, "EQUIPMENT CRYPT", "Utility", false, "1713"],
+        [0, 0, 15, 5, "HYDRO SYSTEM VALVE", "Utility", false, "1714"],
+        [0, 5, 15, 10, "REHAB RECREATION", "Public", false, "1715"],
+        [0, 15, 15, 8, "REHAB ADMIN CORE", "Staff", false, "1716"],
+        [0, 49, 15, 10, "THERAPIST LOUNGE", "Staff", false, "1717"],
+        [0, 59, 17, 13, "FITNESS OUTLOOK", "Public", false, "1718"]
+      ]
+    },
+    "Eighteenth Floor": {
+      "comment": "Isolation Unit & Infectious Disease Wards (Negative Pressure)",
+      "critical_links": [
+        ["ISOLATION CONTROL DESK", "BIO LOCK ISOLATION 1"],
+        ["ISOLATION CONTROL DESK", "BIO LOCK ISOLATION 2"]
+      ],
+      "slots": [
+        [15, 0, 12, 15, "ISOLATION CHANNELS", "Circulation", true, "1801"],
+        [15, 15, 12, 41, "WAITING HALL & LOBBY FOR CIRCULATION", "Circulation", true, "1802"],
+        [0, 23, 15, 10, "STAIRS (UP / DN)", "Circulation", true, "1803"],
+        [0, 41, 15, 8, "LIFT", "Circulation", true, "1804"],
+        [37, 44, 5, 12, "EMERGENCY EXIT", "Circulation", true, "1805"],
+        [27, 0, 15, 20, "BIO LOCK ISOLATION 1", "Critical", false, "1806"],
+        [27, 20, 10, 12, "BIO LOCK ISOLATION 2", "Critical", false, "1807"],
+        [37, 20, 5, 12, "HEPA FILTER TANK", "Utility", false, "1808"],
+        [27, 32, 10, 12, "BIO LOCK ISOLATION 3", "Critical", false, "1809"],
+        [37, 32, 5, 12, "HEPA FILTER TANK 2", "Utility", false, "1810"],
+        [27, 44, 10, 12, "QUARANTINE BED 4", "Critical", false, "1811"],
+        [22, 56, 20, 16, "NEGATIVE PRESSURE HOLD", "Critical", false, "1812"],
+        [17, 56, 5, 16, "CONTAM HAZARD STORAGE", "Utility", false, "1813"],
+        [0, 0, 15, 5, "AIR LOCK VALVE", "Utility", false, "1814"],
+        [0, 5, 15, 10, "VIROLOGY LAB STATION", "Diagnostic", false, "1815"],
+        [0, 15, 15, 8, "ISOLATION CONTROL DESK", "Staff", false, "1816"],
+        [0, 49, 15, 10, "CDC DISPATCH SUITE", "Staff", false, "1817"],
+        [0, 59, 17, 13, "STERILIZATION CHUTE", "Utility", false, "1818"]
+      ]
+    },
+    "Nineteenth Floor": {
+      "comment": "Surgical Command & Trauma Center (Helipad Feeder System)",
+      "critical_links": [
+        ["ICU TRAUMA CONTROL", "TRAUMA OR THEATER"],
+        ["ICU TRAUMA CONTROL", "HELI ELEVATOR AXIS"]
+      ],
+      "slots": [
+        [15, 0, 12, 15, "SURGICAL STAGING BAY", "Circulation", true, "1901"],
+        [15, 15, 12, 41, "WAITING HALL & LOBBY FOR CIRCULATION", "Circulation", true, "1902"],
+        [0, 23, 15, 10, "STAIRS (UP / DN)", "Circulation", true, "1903"],
+        [0, 41, 15, 8, "LIFT", "Circulation", true, "1904"],
+        [37, 44, 5, 12, "EMERGENCY EXIT", "Circulation", true, "1905"],
+        [27, 0, 15, 20, "TRAUMA OR THEATER", "Critical", false, "1906"],
+        [27, 20, 10, 12, "ANESTHESIA CRADLE", "Critical", false, "1907"],
+        [37, 20, 5, 12, "SCRUB ROOM A", "Utility", false, "1908"],
+        [27, 32, 10, 12, "HIGH INTENSITY OR 2", "Critical", false, "1909"],
+        [37, 32, 5, 12, "SCRUB ROOM B", "Utility", false, "1910"],
+        [27, 44, 10, 12, "NEURO TRAUMA POD", "Critical", false, "1911"],
+        [22, 56, 20, 16, "BURN INTENSIVE POD", "Critical", false, "1912"],
+        [17, 56, 5, 16, "FLUID CLEAN DEPOT", "Utility", false, "1913"],
+        [0, 0, 15, 5, "GAS SUPPLY POD", "Utility", false, "1914"],
+        [0, 5, 15, 10, "TRAUMA BLOOD BANK", "Diagnostic", false, "1915"],
+        [0, 15, 15, 8, "ICU TRAUMA CONTROL", "Staff", false, "1916"],
+        [0, 49, 15, 10, "HELI ELEVATOR AXIS", "Circulation", false, "1917"],
+        [0, 59, 17, 13, "EMERGENCY TEAM ROOM", "Staff", false, "1918"]
+      ]
+    },
+    "Twentieth Floor": {
+      "comment": "Rooftop Trauma Helipad Aviation Deck. Minimal footprint core, massive open structural surface area.",
+      "dimensions": {"width_x": 25, "length_y": 30},
+      "critical_links": [
+        ["HELI TRACK DESK", "ROOFTOP HELIPAD"]
+      ],
+      "slots": [
+        [15, 0, 10, 15, "ROOFTOP TRANSIT LOBBY", "Circulation", true, "2001"],
+        [0, 0, 15, 10, "STAIRS (UP / DN)", "Circulation", true, "2003"],
+        [0, 10, 15, 8, "LIFT", "Circulation", true, "2004"],
+        [20, 15, 5, 12, "EMERGENCY EXIT", "Circulation", true, "2005"],
+        [0, 18, 15, 12, "HELI TRACK DESK", "Staff", false, "2006"],
+        [15, 15, 5, 5, "VALVE CONTROL ROOM", "Utility", false, "2007"],
+        [15, 20, 5, 5, "FOAM SURGE TANKS", "Utility", false, "2008"]
+      ]
+    }
+  }
+}
