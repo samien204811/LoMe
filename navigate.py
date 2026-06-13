@@ -293,6 +293,22 @@ class HospitalNavigator:
 
         return steps
 
+    def get_path_with_positions(self, path):
+        result = []
+
+        for node in path:
+            floor, room = node
+            info = self.node[node]
+
+            result.append({
+                "floor": floor,
+                "room": room,
+                "label": info["label"],
+                "x": info["pos"][0],
+                "y": info["pos"][1]
+            })
+
+        return result
 
 # -----------------------------
 # RUN
