@@ -118,9 +118,6 @@ def load_floor(floor_idx):
                color=color.rgba(20, 25, 40, 255))
     scene_entities.append(g)
 
-    outer = Entity(model='plane', scale=200, position=pivot_pos[0],
-                   color=color.rgba(15, 18, 28, 255))
-    scene_entities.append(outer)
 
     grid = Entity(model='grid', scale=120, color=color.rgba(60, 70, 90, 40),
                   position=pivot_pos[0])
@@ -129,10 +126,10 @@ def load_floor(floor_idx):
     # outer perimeter walls
     margin = 8
     for sx, sz, sw, sd, scol in [
-        (world_cx, min_z - margin,  world_w,     0.5,  color.rgba(80,90,110,80)),
-        (world_cx, max_z + margin,  world_w,     0.5,  color.rgba(80,90,110,80)),
-        (min_x - margin, world_cz,  0.5, world_d+16, color.rgba(80,90,110,80)),
-        (max_x + margin, world_cz,  0.5, world_d+16, color.rgba(80,90,110,80)),
+        (world_cx, min_z - margin,  world_w,     0.5,  color.rgba(80,90,110,90)),
+        (world_cx, max_z + margin,  world_w,     0.5,  color.rgba(80,90,110,90)),
+        (min_x - margin, world_cz,  0.5, world_d+16, color.rgba(80,90,110,90)),
+        (max_x + margin, world_cz,  0.5, world_d+16, color.rgba(80,90,110,90)),
     ]:
         e = Entity(model='cube',
                    scale=(sw, WALL_H, sd),
